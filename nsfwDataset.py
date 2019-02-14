@@ -19,13 +19,12 @@ def imageDownload(url, folder):
             with open(file_path, 'wb') as outfile:
                 outfile.write(download_file.content)
         else:
-            print("download forbidden!!")
+            print("download fail")
     except:
         print("download fail")
 
 if __name__ == "__main__":
     rootdir = "E:\\nsfw_data_source_urls"
-    image_roo_dir = "E:\\nsfw_data_source_urls_images"
     for dirpath, dirnames, filenames in os.walk(rootdir):
         if len(filenames) > 0:
             for filename in filenames:
